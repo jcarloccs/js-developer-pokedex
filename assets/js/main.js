@@ -27,7 +27,23 @@ function loadPokemonItens(offset, limit) {
     pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
         const newHtml = pokemons.map(convertPokemonToLi).join('')
         pokemonList.innerHTML += newHtml
+        const poke = document.querySelectorAll('.pokemon')
+        poke.forEach((x) => {
+            x.addEventListener('click', (e) => {
+                openModal();
+                console.log(e.currentTarget)
+            })
+        })
     })
+
+}
+
+let modal = document.getElementById('modal');
+function openModal() {
+    modal.style.display = 'block';
+}
+function closeModal() {
+    modal.style.display = 'none';
 }
 
 loadPokemonItens(offset, limit)

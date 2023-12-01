@@ -163,3 +163,16 @@
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
+
+#modal {
+    display: none;
+    position: fixed;
+    border-radius: 1rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
