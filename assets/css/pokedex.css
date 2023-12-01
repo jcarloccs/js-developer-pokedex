@@ -84,6 +84,7 @@
     margin: .5rem;
     padding: 1rem;
     border-radius: 1rem;
+    cursor: pointer;
 }
 
 .pokemon .number {
@@ -137,13 +138,18 @@
 }
 
 .pagination button {
-    padding: .25rem .5rem;
+    padding: .25rem .7rem;
     margin: .25rem 0;
-    font-size: .625rem;
+    font-size: 1rem;
     color: #fff;
     background-color: #6c79db;
     border: none;
     border-radius: 1rem;
+    cursor: pointer;
+}
+
+.pagination button:hover {
+    background-color: #6c79db94;
 }
 
 @media screen and (min-width: 380px) {
@@ -164,15 +170,65 @@
     }
 }
 
-#modal {
+#container-modal {
     display: none;
     position: fixed;
     border-radius: 1rem;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 20px;
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px;
     z-index: 1000;
+    font-weight: bold;
+    font-size: 0.9rem;
+    max-width: 90vw;
+    min-width: 250px;
+    max-height: 90vh;
+}
+
+#modal {
+    color: white;
+    border-radius: 1rem;
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+}
+
+.descriptions {
+    font-weight: normal;
+}
+
+#modal h2 {
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#modal ul li {
+    list-style-type: none;
+    line-height: 1.5rem;
+}
+
+#modal ul {
+    padding-left: 0;
+}
+
+#modal img {
+    width: 100%;
+    height: 200px;
+}
+
+#modal button {
+    color: white;
+    border-radius: 20px;
+    border: none;
+    height: 30px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#modal button:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
 }
